@@ -1,5 +1,6 @@
 'use strict'
 
+var path = require('path')
 var webpack = require('webpack')
 var WebpackDevServer = require('webpack-dev-server')
 var webpackConfig = require('../webpack.config.js')
@@ -16,6 +17,7 @@ docs.devtool = 'eval'
 docs.debug = true
 
 new WebpackDevServer(webpack(docs), {
+  contentBase: path.join(__dirname, '../docs'),
   publicPath: '/' + docs.output.publicPath,
   hot: true,
   stats: {

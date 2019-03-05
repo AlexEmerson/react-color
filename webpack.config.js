@@ -1,5 +1,5 @@
-const path = require('path')
-const webpack = require('webpack')
+var path = require('path')
+var webpack = require('webpack')
 
 module.exports = {
   entry: ['./docs/index.js'],
@@ -33,7 +33,11 @@ module.exports = {
     ],
   },
   resolve: {
+    alias: {
+      'react-color': path.resolve(__dirname, './src/index.js'),
+    },
     extensions: ['', '.js', '.jsx'],
+    fallback: [path.resolve(__dirname, './docs/modules')],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin({ quiet: true }),

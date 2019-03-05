@@ -5,10 +5,10 @@ import reactCSS from 'reactcss'
 
 import { Container, Grid } from 'react-basic-layout'
 import Docs from 'react-docs'
-import Markdown from '../../../modules/react-docs/lib/components/Markdown'
+import Markdown from 'react-docs/lib/components/Markdown'
 
 import documentation from '../../documentation'
-import { Button, buttonmd, Sketch, sketchmd } from '../../../examples'
+import { Button, buttonmd, Sketch, sketchmd } from '../../examples'
 
 class HomeDocumentation extends React.Component {
 
